@@ -41,3 +41,7 @@ export interface ApiResponse<T> {
   orders?: T[]
   order?: T // Add this for single order response
 }
+
+export interface EmptyStateProps {
+  onNavigateToHome: () => void
+}
