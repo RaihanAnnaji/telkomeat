@@ -82,7 +82,7 @@ export default function CheckoutPage() {
     )
 
     try {
-      const res = await fetch("http://localhost:8000/api/orders", {
+      const res = await fetch("https://api.telkomeat.my.id/api/orders", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

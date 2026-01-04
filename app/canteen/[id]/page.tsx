@@ -35,7 +35,7 @@ export default function CanteenDetailPage({ params }: { params: Promise<{ id: st
         setLoading(true)
         setError(null)
         
-        const res = await fetch(`http://localhost:8000/api/canteen/${canteen.id}/products`, {
+        const res = await fetch(`https://api.telkomeat.my.id/api/canteen/${canteen.id}/products`, {
           headers: {
             Accept: "application/json",
           },

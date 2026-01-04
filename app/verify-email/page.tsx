@@ -39,7 +39,7 @@ export default function VerifyEmailPage() {
 
   const verifyEmail = async (verificationToken: string) => {
     try {
-      const res = await fetch("http://localhost:8000/api/email/verify", {
+      const res = await fetch("https://api.telkomeat.my.id/api/email/verify", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -79,7 +79,7 @@ export default function VerifyEmailPage() {
 
     setIsResending(true)
     try {
-      const res = await fetch("http://localhost:8000/api/email/resend", {
+      const res = await fetch("https://api.telkomeat.my.id/api/email/resend", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

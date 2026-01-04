@@ -42,7 +42,7 @@ export default function PartnerSettings() {
         return
       }
 
-      const response = await fetch("http://localhost:8000/api/kantin/my-kantin", {
+      const response = await fetch("https://api.telkomeat.my.id/api/kantin/my-kantin", {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Accept": "application/json"
@@ -71,7 +71,7 @@ export default function PartnerSettings() {
     try {
       const token = localStorage.getItem("token")
       
-      const response = await fetch(`http://localhost:8000/api/kantin/${kantinId}/status`, {
+      const response = await fetch(`https://api.telkomeat.my.id/api/kantin/${kantinId}/status`, {
         method: "PATCH",
         headers: {
           "Authorization": `Bearer ${token}`,

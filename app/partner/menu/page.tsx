@@ -37,13 +37,13 @@ export default function MenuManagement() {
       const kantinId = localStorage.getItem("kantin_id")
       
       const [productsRes, canteenRes] = await Promise.all([
-        fetch("http://localhost:8000/api/products", {
+        fetch("https://api.telkomeat.my.id/api/products", {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
           },
         }),
-        fetch(`http://localhost:8000/api/canteen/${kantinId}`, {
+        fetch(`https://api.telkomeat.my.id/api/canteen/${kantinId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
@@ -84,8 +84,8 @@ const handleAdd = async () => {
   try {
     // Gunakan PUT untuk edit, POST untuk tambah
     const url = editingId 
-      ? `http://localhost:8000/api/products/${editingId}`
-      : "http://localhost:8000/api/products"
+      ? `https://api.telkomeat.my.id/api/products/${editingId}`
+      : "https://api.telkomeat.my.id/api/products"
     
     const method = editingId ? "PUT" : "POST"
 
@@ -139,7 +139,7 @@ const handleAdd = async () => {
     if (!confirm("Yakin ingin menghapus produk ini?")) return
     const token = localStorage.getItem("token")
     try {
-      await fetch(`http://localhost:8000/api/products/${id}`, {
+      await fetch(`https://api.telkomeat.my.id/api/products/${id}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       })

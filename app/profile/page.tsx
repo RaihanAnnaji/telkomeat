@@ -36,7 +36,7 @@ export default function ProfilePage() {
         return
       }
 
-      const response = await fetch("http://localhost:8000/api/profile", {
+      const response = await fetch("https://api.telkomeat.my.id/api/profile", {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Accept": "application/json"
@@ -72,7 +72,7 @@ export default function ProfilePage() {
         return
       }
       
-      const response = await fetch("http://localhost:8000/api/profile", {
+      const response = await fetch("https://api.telkomeat.my.id/api/profile", {
         method: "PUT",
         headers: {
           "Authorization": `Bearer ${token}`,
@@ -111,7 +111,7 @@ export default function ProfilePage() {
     try {
       const token = localStorage.getItem("token")
       if (token) {
-        await fetch("http://localhost:8000/api/logout", {
+        await fetch("https://api.telkomeat.my.id/api/logout", {
           method: "POST",
           headers: {
             "Authorization": `Bearer ${token}`,

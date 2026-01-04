@@ -17,7 +17,7 @@ export function LoginForm() {
     setIsLoading(true)
 
     try {
-      const res = await fetch("http://localhost:8000/api/login", {
+      const res = await fetch("https://api.telkomeat.my.id/api/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

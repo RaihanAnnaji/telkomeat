@@ -42,13 +42,13 @@ export default function PartnerDashboard() {
     const fetchDashboard = async () => {
       try {
         const [dashboardRes, ordersRes] = await Promise.all([
-          fetch(`http://localhost:8000/api/dashboard/${kantinId}`, {
+          fetch(`https://api.telkomeat.my.id/api/dashboard/${kantinId}`, {
             headers: {
               Authorization: `Bearer ${token}`,
               Accept: "application/json",
             },
           }),
-          fetch(`http://localhost:8000/api/dashboard/${kantinId}/recent-orders`, {
+          fetch(`https://api.telkomeat.my.id/api/dashboard/${kantinId}/recent-orders`, {
             headers: {
               Authorization: `Bearer ${token}`,
               Accept: "application/json",

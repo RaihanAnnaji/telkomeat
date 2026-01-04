@@ -23,7 +23,7 @@ export default function PartnerOrders() {
 
       try {
         // Fetch canteen name
-        const canteenRes = await fetch(`http://localhost:8000/api/canteen/${kantinId}`, {
+        const canteenRes = await fetch(`https://api.telkomeat.my.id/api/canteen/${kantinId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
@@ -34,7 +34,7 @@ export default function PartnerOrders() {
         setCanteenName(canteenData.name || "Kantin")
 
         // Fetch orders
-        const ordersRes = await fetch(`http://localhost:8000/api/dashboard/${kantinId}/recent-orders`, {
+        const ordersRes = await fetch(`https://api.telkomeat.my.id/api/dashboard/${kantinId}/recent-orders`, {
           headers: {
             Authorization: `Bearer ${token}`,
             Accept: "application/json",
@@ -106,7 +106,7 @@ export default function PartnerOrders() {
   const handleConfirmOrder = async (orderId: string) => {
     const token = localStorage.getItem("token")
     try {
-      const response = await fetch(`http://localhost:8000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://api.telkomeat.my.id/api/orders/${orderId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +139,7 @@ export default function PartnerOrders() {
   const handleCancelOrder = async (orderId: string) => {
     const token = localStorage.getItem("token")
     try {
-      const response = await fetch(`http://localhost:8000/api/orders/${orderId}/status`, {
+      const response = await fetch(`https://api.telkomeat.my.id/api/orders/${orderId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

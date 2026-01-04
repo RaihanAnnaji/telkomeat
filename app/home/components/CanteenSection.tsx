@@ -21,7 +21,7 @@ export default function CanteenSection() {
 
       for (const kantin of canteenList) {
         try {
-          const res = await fetch(`http://localhost:8000/api/canteen/${kantin.id}/products`, {
+          const res = await fetch(`https://api.telkomeat.my.id/api/canteen/${kantin.id}/products`, {
             cache: "no-store",
           })
           const data = await res.json()

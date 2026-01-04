@@ -36,7 +36,7 @@ export default function OrderHistoryPage() {
         return
       }
 
-      const response = await fetch("http://localhost:8000/api/user/orders", {
+      const response = await fetch("https://api.telkomeat.my.id/api/user/orders", {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Accept": "application/json"

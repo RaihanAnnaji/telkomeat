@@ -10,7 +10,7 @@ export default function MenuItemCard({ item, onEdit, onDelete }: MenuItemCardPro
   const handleToggleStatus = async () => {
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch(`http://localhost:8000/api/products/${item.id}/status`, {
+      const response = await fetch(`https://api.telkomeat.my.id/api/products/${item.id}/status`, {
         method: "PATCH",
         headers: {
           "Authorization": `Bearer ${token}`,

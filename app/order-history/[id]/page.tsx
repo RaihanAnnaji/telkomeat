@@ -62,7 +62,7 @@ export default function OrderDetailPage() {
         return
       }
 
-      const response = await fetch(`http://localhost:8000/api/user/orders/${orderId}`, {
+      const response = await fetch(`https://api.telkomeat.my.id/api/user/orders/${orderId}`, {
         headers: {
           "Authorization": `Bearer ${token}`,
           "Accept": "application/json"
