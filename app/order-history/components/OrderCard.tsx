@@ -124,12 +124,6 @@ export default function OrderCard({ order, onViewDetail }: OrderCardProps) {
         <div className="text-sm text-gray-600">
           ID Pesanan: {order.id}
         </div>
-        <button
-          onClick={() => onViewDetail(order.id)}
-          className="flex items-center gap-2 text-primary font-medium hover:opacity-70 transition px-4 py-2 rounded-lg hover:bg-primary/10"
-        >
-          Lihat Detail
-        </button>
       </div>
     </div>
   )
